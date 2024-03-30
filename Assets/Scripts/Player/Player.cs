@@ -16,5 +16,10 @@ namespace Player
         {
             Debug.Log($"Player name: {Name} / Player experience: {Exp}");
         }
+
+        public override void TakeDamage(int damageValue)
+        {
+            Debug.Log($"My name is {Name}: After hitting with force: {damageValue} I have: {Health - damageValue} health");
+        }
     }
 }

@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Dragon : MonoBehaviour
+namespace Dragon
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Dragon : Person.Person
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void TakeDamage(int damageValue)
+        {
+            Debug.Log($"I, the mighty dragon, have lost: {damageValue} hit points from a hunter's shot.");
+        }
     }
 }

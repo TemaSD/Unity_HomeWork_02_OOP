@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Person
 {
-    public class Person : MonoBehaviour
+    public abstract class Person : MonoBehaviour
     {
         [SerializeField] private int health;
         [SerializeField] private new string name;
@@ -29,6 +29,7 @@ namespace Person
         {
             Debug.Log($"Player name: {Name}");
         }
-    
+
+        public abstract void TakeDamage(int damageValue);
     }
 }
